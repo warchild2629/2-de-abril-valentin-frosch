@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2 de Abril: Día del Veterano y de los Caídos en Malvinas | E.E.S.T N°3 "Islas Malvinas"</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+--navy-dark: #0f172a;
+--navy-mid: #1e293b;
+--blue-accent: #0284c7;
+--sky-blue: #38bdf8;
+--sol-gold: #f59e0b;
+--bg-light: #f8fafc;
+--card-bg: #ffffff;
+--text-dark: #0f172a;
+--text-muted: #64748b;
+--border-color: #cbd5e1;
+--highlight-bg: #fef08a;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+scroll-behavior: smooth;
+}
+
+body {
+background-color: var(--bg-light);
+color: var(--text-dark);
+line-height: 1.7;
+}
+
+/* Banner Institucional Escolar */
+.school-banner {
+background-color: var(--navy-dark);
+color: #ffffff;
+text-align: center;
+padding: 12px 15px;
+font-size: 1rem;
+border-bottom: 4px solid var(--sol-gold);
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+position: sticky;
+top: 0;
+z-index: 1002;
+}
+
+.school-banner i {
+color: var(--sol-gold);
+font-size: 1.2rem;
+}
+
+/* Navbar */
+header {
+background-color: #ffffff;
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+position: sticky;
+top: 48px;
+z-index: 1001;
+}
+
+nav {
+max-width: 1300px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 25px;
+}
+
+.logo {
+font-weight: 800;
+font-size: 1.35rem;
+color: var(--navy-dark);
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.logo i {
+color: var(--blue-accent);
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+gap: 20px;
+}
+
+.nav-links a {
+text-decoration: none;
+color: var(--navy-dark);
+font-weight: 600;
+font-size: 0.95rem;
+transition: color 0.2s;
+}
+
+.nav-links a:hover {
+color: var(--blue-accent);
+}
+
+/* Hero Header */
+.hero {
+background: linear-gradient(rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.92)),
+url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+color: #ffffff;
+padding: 90px 20px 70px 20px;
+text-align: center;
+}
+
+.hero-container {
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.badge-school {
+display: inline-block;
+background-color: rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(8px);
+padding: 8px 20px;
+border-radius: 30px;
+font-size: 1rem;
+border: 1px solid rgba(255, 255, 255, 0.3);
+margin-bottom: 20px;
+color: var(--sky-blue);
+font-weight: 700;
+}
+
+.hero h1 {
+font-size: 3rem;
+margin-bottom: 20px;
+line-height: 1.2;
+}
+
+.hero p {
+font-size: 1.25rem;
+color: #cbd5e1;
+max-width: 850px;
+margin: 0 auto;
+}
+
+/* Buscador Funcional */
+.search-container {
+max-width: 750px;
+margin: -30px auto 40px auto;
+padding: 0 20px;
+position: relative;
+z-index: 1000;
+}
+
+.search-box {
+display: flex;
+background: #ffffff;
+border-radius: 50px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+padding: 8px;
+border: 2px solid var(--blue-accent);
+}
+
+.search-box input {
+flex: 1;
+border: none;
+outline: none;
+padding: 12px 20px;
+font-size: 1.05rem;
+border-radius: 50px;
+}
+
+.search-box button {
+background-color: var(--blue-accent);
+color: white;
+border: none;
+padding: 12px 28px;
+border-radius: 50px;
+cursor: pointer;
+font-weight: 700;
+font-size: 1rem;
+transition: background 0.2s;
+}
+
+.search-box button:hover {
+background-color: #0369a1;
+}
+
+.search-stats {
+text-align: center;
+font-size: 0.9rem;
+color: var(--text-muted);
+margin-top: 10px;
+font-weight: 600;
+}
+
+/* Container Principal */
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px 80px 20px;
+}
+
+section {
+margin-bottom: 70px;
+}
+
+.section-title {
+text-align: center;
+font-size: 2.2rem;
+color: var(--navy-dark);
+margin-bottom: 10px;
+}
+
+.section-subtitle {
+text-align: center;
+color: var(--text-muted);
+font-size: 1.1rem;
+margin-bottom: 40px;
+}
+
+/* Grillas y Tarjetas */
+.grid-3 {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 25px;
+}
+
+.grid-2 {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+gap: 25px;
+}
+
+.card {
+background: var(--card-bg);
+border-radius: 12px;
+padding: 30px;
+box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+border: 1px solid var(--border-color);
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+transform: translateY(-4px);
+box-shadow: 0 12px 20px -5px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+width: 50px;
+height: 50px;
+border-radius: 10px;
+background-color: #e0f2fe;
+color: var(--blue-accent);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+margin-bottom: 20px;
+}
+
+.card h3 {
+font-size: 1.35rem;
+color: var(--navy-dark);
+margin-bottom: 12px;
+}
+
+/* Linea de Tiempo */
+.timeline {
+position: relative;
+max-width: 900px;
+margin: 0 auto;
+}
+
+.timeline::before {
+content: '';
+position: absolute;
+left: 50%;
+width: 4px;
+height: 100%;
+background-color: var(--border-color);
+transform: translateX(-50%);
+}
+
+.timeline-item {
+display: flex;
+justify-content: flex-end;
+padding-right: 40px;
+position: relative;
+margin-bottom: 35px;
+width: 50%;
+}
+
+.timeline-item:nth-child(even) {
+align-self: flex-end;
+justify-content: flex-start;
+padding-right: 0;
+padding-left: 40px;
+margin-left: 50%;
+}
+
+.timeline-dot {
+width: 20px;
+height: 20px;
+background-color: var(--blue-accent);
+border: 4px solid var(--card-bg);
+border-radius: 50%;
+position: absolute;
+right: -10px;
+top: 15px;
+z-index: 2;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+right: auto;
+left: -10px;
+}
+
+.timeline-content {
+background: var(--card-bg);
+padding: 25px;
+border-radius: 12px;
+border: 1px solid var(--border-color);
+box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.timeline-date {
+display: inline-block;
+background: #e0f2fe;
+color: var(--blue-accent);
+font-weight: 700;
+font-size: 0.9rem;
+padding: 4px 14px;
+border-radius: 20px;
+margin-bottom: 10px;
+}
+
+.timeline-content h4 {
+font-size: 1.2rem;
+color: var(--navy-dark);
+margin-bottom: 8px;
+}
+
+/* Glosario Acordeon */
+.accordion {
+max-width: 900px;
+margin: 0 auto;
+}
+
+.accordion-item {
+background: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: 8px;
+margin-bottom: 12px;
+overflow: hidden;
+}
+
+.accordion-header {
+width: 100%;
+padding: 20px;
+background: none;
+border: none;
+text-align: left;
+font-size: 1.1rem;
+font-weight: 700;
+color: var(--navy-dark);
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.accordion-body {
+padding: 0 20px 20px 20px;
+display: none;
+border-top: 1px solid #f1f5f9;
+color: var(--text-dark);
+}
+
+.accordion-item.active .accordion-body {
+display: block;
+}
+
+.accordion-item.active .accordion-header i {
+transform: rotate(180deg);
+}
+
+/* Quiz */
+.quiz-card {
+background: var(--card-bg);
+border-radius: 12px;
+padding: 35px;
+max-width: 800px;
+margin: 0 auto;
+border: 1px solid var(--border-color);
+box-shadow: 0 10px 20px -5px rgba(0,0,0,0.05);
+}
+
+.quiz-option {
+display: block;
+width: 100%;
+padding: 14px 18px;
+margin: 10px 0;
+background: #f8fafc;
+border: 1px solid var(--border-color);
+border-radius: 8px;
+cursor: pointer;
+text-align: left;
+font-size: 1rem;
+font-weight: 600;
+}
+
+.quiz-option.correct {
+background-color: #dcfce7 !important;
+border-color: #22c55e !important;
+color: #15803d;
+}
+
+.quiz-option.incorrect {
+background-color: #fee2e2 !important;
+border-color: #ef4444 !important;
+color: #b91c1c;
+}
+
+/* Muro de Homenajes */
+.wall-box {
+background: var(--card-bg);
+padding: 35px;
+border-radius: 12px;
+border: 1px solid var(--border-color);
+max-width: 850px;
+margin: 0 auto;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.form-group label {
+display: block;
+font-weight: 700;
+margin-bottom: 8px;
+color: var(--navy-dark);
+}
+
+.form-group input, .form-group textarea, .form-group select {
+width: 100%;
+padding: 12px;
+border: 1px solid var(--border-color);
+border-radius: 6px;
+font-size: 1rem;
+}
+
+.btn-submit {
+background: var(--blue-accent);
+color: white;
+border: none;
+padding: 14px 25px;
+border-radius: 6px;
+cursor: pointer;
+font-weight: 700;
+width: 100%;
+font-size: 1rem;
+}
+
+.messages-list {
+margin-top: 30px;
+}
+
+.message-card {
+background: #f8fafc;
+border-left: 4px solid var(--blue-accent);
+padding: 15px 20px;
+border-radius: 0 8px 8px 0;
+margin-bottom: 15px;
+}
+
+.message-header {
+display: flex;
+justify-content: space-between;
+font-weight: 700;
+font-size: 0.9rem;
+color: var(--navy-dark);
+margin-bottom: 6px;
+}
+
+/* Highlight de Búsqueda */
+mark.search-highlight {
+background-color: var(--highlight-bg);
+color: #000;
+padding: 2px 4px;
+border-radius: 3px;
+font-weight: bold;
+}
+
+/* Footer */
+footer {
+background-color: var(--navy-dark);
+color: #ffffff;
+text-align: center;
+padding: 40px 20px;
+}
+
+footer p {
+color: #94a3b8;
+font-size: 0.95rem;
+margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+.hero h1 { font-size: 2.1rem; }
+.grid-2 { grid-template-columns: 1fr; }
+.timeline::before { left: 20px; }
+.timeline-item, .timeline-item:nth-child(even) {
+width: 100%;
+left: 0;
+padding-left: 50px;
+padding-right: 0;
+margin-left: 0;
+}
+.timeline-dot, .timeline-item:nth-child(even) .timeline-dot {
+left: 10px;
+}
+.nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Banner Escolar -->
+<div class="school-banner">
+<i class="fas fa-graduation-cap"></i>
+<span>Trabajo Práctico Institucional Especial — <strong>E.E.S.T N°3 "Islas Malvinas"</strong></span>
+</div>
+
+<!-- Navegación -->
+<header>
+<nav>
+<div class="logo">
+<i class="fas fa-anchor"></i> 2 de Abril: Malvinas
+</div>
+<ul class="nav-links">
+<li><a href="#fundamentos">Derechos</a></li>
+<li><a href="#cronologia">Conflicto 1982</a></li>
+<li><a href="#heroes">Protagonistas</a></li>
+<li><a href="#glosario">Glosario</a></li>
+<li><a href="#quiz">Quiz Escolar</a></li>
+<li><a href="#muro">Homenaje</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- Hero Header -->
+<section class="hero">
+<div class="hero-container">
+<div class="badge-school">Escuela de Educación Secundaria Técnica N°3 "Islas Malvinas"</div>
+<h1>Día del Veterano y de los Caídos en la Guerra de Malvinas</h1>
+<p>Homenaje a los excombatientes, caídos y veteranos que defendieron la soberanía argentina en el Atlántico Sur durante la gesta de 1982.</p>
+</div>
+</section>
+
+<!-- Buscador Totalmente Funcional -->
+<div class="search-container">
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Escribí una palabra clave (ej: Belgrano, Soberanía, Mujeres, Crucero)..." oninput="executeSearch()">
+<button onclick="executeSearch()"><i class="fas fa-search"></i> Buscar</button>
+</div>
+<div class="search-stats" id="searchStats"></div>
+</div>
+
+<div class="container" id="mainContent">
+
+<!-- Fundamentos de Soberanía -->
+<section id="fundamentos" class="searchable-section">
+<h2 class="section-title">¿Por qué las Malvinas son Argentinas?</h2>
+<p class="section-subtitle">Fundamentos geográficos, históricos y jurídicos de nuestro reclamo</p>
+
+<div class="grid-3">
+<div class="card searchable-card">
+<div class="card-icon"><i class="fas fa-globe-americas"></i></div>
+<h3>Argumento Geográfico</h3>
+<p>Las islas forman parte de la plataforma continental argentina, compartiendo continuidad geológica e hidrográfica con el territorio patagónico continental.</p>
+</div>
+<div class="card searchable-card">
+<div class="card-icon"><i class="fas fa-history"></i></div>
+<h3>Argumento Histórico</h3>
+<p>Heredadas de España tras la Revolución de Mayo de 1810. Argentina ejerció soberanía efectiva con gobernadores e instituciones hasta la ocupación británica de 1833.</p>
+</div>
+<div class="card searchable-card">
+<div class="card-icon"><i class="fas fa-gavel"></i></div>
+<h3>Resolución 2065 de la ONU</h3>
+<p>Aprobada en 1965 por la Asamblea General de las Naciones Unidas, reconoce la disputa colonial de soberanía e insta a negociar una solución pacífica.</p>
+</div>
+</div>
+</section>
+
+<!-- Cronología del Conflicto de 1982 -->
+<section id="cronologia" class="searchable-section">
+<h2 class="section-title">Cronología de la Gesta de 1982</h2>
+<p class="section-subtitle">Acontecimientos decisivos durante los 74 días del conflicto militar</p>
+
+<div class="timeline">
+<div class="timeline-item searchable-card">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<span class="timeline-date">2 de Abril de 1982</span>
+<h4>Operación Rosario</h4>
+<p>Desembarco de las fuerzas argentinas y recuperación de Puerto Argentino sin provocar bajas enemigas, priorizando la vida militar británica.</p>
+</div>
+</div>
+<div class="timeline-item searchable-card">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<span class="timeline-date">1 de Mayo de 1982</span>
+<h4>Bautismo de Fuego de la Fuerza Aérea</h4>
+<p>Primeros ataques aéreos masivos. La aviación argentina repele los bombardeos británicos sobre la pista de Puerto Argentino.</p>
+</div>
+</div>
+<div class="timeline-item searchable-card">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<span class="timeline-date">2 de Mayo de 1982</span>
+<h4>Hundimiento del A.R.A. General Belgrano</h4>
+<p>El crucero argentino es atacado fuera de la zona de exclusión por el submarino HMS Conqueror. Fallecen 323 marinos en cumplimiento del deber.</p>
+</div>
+</div>
+<div class="timeline-item searchable-card">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<span class="timeline-date">21 de Mayo de 1982</span>
+<h4>Desembarco en San Carlos</h4>
+<p>Tropas británicas establecen cabecera de playa. Inician combates de extrema dureza en el "Callejón de las Bombas".</p>
+</div>
+</div>
+<div class="timeline-item searchable-card">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<span class="timeline-date">11-13 de Junio de 1982</span>
+<h4>Combates Terrestres Finales</h4>
+<p>Feroces batallas cuerpo a cuerpo en Monte Longdon, Tumbledown, Top Malo House y Goose Green bajo extremas condiciones de frío y escasez.</p>
+</div>
+</div>
+<div class="timeline-item searchable-card">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<span class="timeline-date">14 de Junio de 1982</span>
+<h4>Cese del Fuego</h4>
+<p>Finalización de los combates armados en las islas. Se inicia el duro retorno de los soldados y el proceso de memoria postguerra.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Protagonistas y Aspectos Clave -->
+<section id="heroes" class="searchable-section">
+<h2 class="section-title">Héroes y Protagonistas Ocultos</h2>
+<p class="section-subtitle">Las historias humanas fundamentales en la tierra, el aire y el mar</p>
+
+<div class="grid-2">
+<div class="card searchable-card">
+<div class="card-icon"><i class="fas fa-user-nurse"></i></div>
+<h3>El Rol de las Mujeres en el Conflicto</h3>
+<p>Enfermeras, instrumentadoras quirúrgicas y personal militar atendieron a cientos de heridos en el Buque Hospital Almirante Irízar y centros continentales como Comodoro Rivadavia.</p>
+</div>
+<div class="card searchable-card">
+<div class="card-icon"><i class="fas fa-plane-flight"></i></div>
+<h3>Los Pilotos Argentinos</h3>
+<p>Volando al ras del mar para eludir los radares enemigos, la aviación de caza argentina realizó maniobras heroicas reconocidas mundialmente por los propios mandos navales británicos.</p>
+</div>
+<div class="card searchable-card">
+<div class="card-icon"><i class="fas fa-envelope"></i></div>
+<h3>Las Cartas desde el Frente</h3>
+<p>Las cartas enviadas por los conscriptos representaron el sostén emocional principal para resistir las duras ráfagas de viento y el fuego del enemigo.</p>
+</div>
+<div class="card searchable-card">
+<div class="card-icon"><i class="fas fa-ribbon"></i></div>
+<h3>La Cuestión de la Postguerra</h3>
+<p>El retorno en silencio de las tropas y la falta inicial de contención médica promovió la lucha constante de los excombatientes para obtener el reconocimiento legítimo que merecían.</p>
+</div>
+</div>
+</section>
+
+<!-- Glosario Educativo -->
+<section id="glosario" class="searchable-section">
+<h2 class="section-title">Glosario de Términos del Conflicto</h2>
+<p class="section-subtitle">Conceptos para estudiar la Cuestión Malvinas</p>
+
+<div class="accordion">
+<div class="accordion-item searchable-card">
+<button class="accordion-header" onclick="toggleAccordion(this)">
+<span>¿Qué es la "Zona de Exclusión"?</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="accordion-body">
+Área marítima de 200 millas fijada unilateralmente por Gran Bretaña alrededor de las islas. El crucero Belgrano fue hundido fuera de dicho límite.
+</div>
+</div>
+<div class="accordion-item searchable-card">
+<button class="accordion-header" onclick="toggleAccordion(this)">
+<span>¿Qué fue el Informe Rattenbach?</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="accordion-body">
+Análisis oficial sobre las responsabilidades tácticas y estratégicas de las juntas militares durante la conducción de la contienda armada.
+</div>
+</div>
+<div class="accordion-item searchable-card">
+<button class="accordion-header" onclick="toggleAccordion(this)">
+<span>¿Qué establece la Cláusula Transitoria Primera?</span>
+<i class="fas fa-chevron-down"></i>
+</button>
+<div class="accordion-body">
+Ratifica en la Constitución Nacional la imprescriptible soberanía argentina sobre las Islas Malvinas, Georgias del Sur y Sandwich del Sur, exigiendo la vía diplomática y pacífica.
+</div>
+</div>
+</div>
+</section>
+
+<!-- Quiz Escolar -->
+<section id="quiz">
+<h2 class="section-title">Cuestionario Escolar Integrador</h2>
+<p class="section-subtitle">Evaluá cuánto aprendiste sobre el 2 de Abril</p>
+
+<div class="quiz-card" id="quizBox">
+<h3 id="quizQuestion" style="margin-bottom: 20px; color: var(--navy-dark);">Cargando pregunta...</h3>
+<div id="quizOptions"></div>
+<p id="quizFeedback" style="margin-top: 15px; font-weight: 700;"></p>
+</div>
+</section>
+
+<!-- Muro de Homenaje -->
+<section id="muro">
+<h2 class="section-title">Muro de Homenaje y Memoria</h2>
+<p class="section-subtitle">Dejá un pensamiento para nuestros veteranos e historia</p>
+
+<div class="wall-box">
+<form id="wallForm">
+<div class="form-group">
+<label for="author">Nombre / Curso / Escuela</label>
+<input type="text" id="author" placeholder="Ej. Mateo Gómez - 5to Año" required>
+</div>
+<div class="form-group">
+<label for="message">Mensaje de Reflexión</label>
+<textarea id="message" rows="3" placeholder="Escribí unas palabras en homenaje..." required></textarea>
+</div>
+<button type="submit" class="btn-submit">Publicar Mensaje</button>
+</form>
+
+<div class="messages-list" id="messagesContainer">
+<div class="message-card">
+<div class="message-header">
+<span>E.E.S.T N°3 "Islas Malvinas"</span>
+<span>Honor y Gloria</span>
+</div>
+<p>Mantenemos viva la memoria de quienes entregaron su vida defendiendo nuestra soberanía nacional con honor.</p>
+</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<!-- Pie de Página -->
+<footer>
+<p><strong>E.E.S.T N°3 "Islas Malvinas"</strong></p>
+<p>Trabajo Práctico Institucional Educativo — Proyecto sobre la Cuestión Malvinas</p>
+</footer>
+
+<script>
+// Lógica de Búsqueda y Resaltado en Tiempo Real
+function executeSearch() {
+const query = document.getElementById('searchInput').value.trim().toLowerCase();
+const cards = document.querySelectorAll('.searchable-card');
+const stats = document.getElementById('searchStats');
+let matchCount = 0;
+
+if (query === "") {
+// Restaurar vista limpia
+cards.forEach(card => {
+card.style.display = "";
+removeHighlights(card);
+});
+stats.innerText = "";
+return;
+}
+
+cards.forEach(card => {
+removeHighlights(card);
+const text = card.innerText.toLowerCase();
+
+if (text.includes(query)) {
+card.style.display = "";
+highlightText(card, query);
+matchCount++;
+} else {
+card.style.display = "none";
+}
+});
+
+stats.innerText = matchCount > 0
+? Se encontraron ${matchCount} elementos coincidentes con "${query}"
+: No se encontraron resultados para "${query}"`;
+}
+
+function highlightText(element, query) {
+const nodes = element.querySelectorAll('h3, h4, p, span');
+nodes.forEach(node => {
+const text = node.innerText;
+const regex = new RegExp((${escapeRegExp(query)}), 'gi'); if (regex.test(text)) { node.innerHTML = text.replace(regex, '&lt;mark class="search-highlight"&gt;$1</mark>');
+}
+});
+}
+
+function removeHighlights(element) {
+const highlights = element.querySelectorAll('mark.search-highlight');
+highlights.forEach(h => {
+const parent = h.parentNode;
+parent.replaceChild(document.createTextNode(h.innerText), h);
+parent.normalize();
+});
+}
+
+function escapeRegExp(string) {
+return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Acordeón
+function toggleAccordion(button) {
+const item = button.parentElement;
+item.classList.toggle('active');
+}
+
+// Quiz
+const quizData = [
+{
+q: "¿Qué resolución de la ONU reconoció la disputa de soberanía de Malvinas en 1965?",
+options: ["Resolución 2065", "Resolución 144", "Tratado de Utrecht", "Carta de la OEA"],
+correct: 0
+},
+{
+q: "¿Cuándo se produjo el trágico hundimiento del A.R.A. General Belgrano?",
+options: ["2 de Abril", "2 de Mayo", "14 de Junio", "25 de Mayo"],
+correct: 1
+},
+{
+q: "¿Qué función principal cumplieron las mujeres argentinas en el conflicto militar?",
+options: ["Comandantes tácticas", "Enfermeras e instrumentadoras de campaña", "Pilotos de combate", "Diplomáticas en Londres"],
+correct: 1
+}
+];
+
+let currentQ = 0;
+
+function renderQuiz() {
+const q = quizData[currentQ];
+document.getElementById('quizQuestion').innerText = ``${currentQ + 1}. ${q.q};
+const optionsBox = document.getElementById('quizOptions');
+optionsBox.innerHTML = '';
+document.getElementById('quizFeedback').innerText = '';
+
+q.options.forEach((opt, index) => {
+const btn = document.createElement('button');
+btn.className = 'quiz-option';
+btn.innerText = opt;
+btn.onclick = () => checkQuiz(btn, index, q.correct);
+optionsBox.appendChild(btn);
+});
+}
+
+function checkQuiz(btn, selected, correct) {
+const btns = document.querySelectorAll('.quiz-option');
+btns.forEach(b => b.onclick = null);
+
+if (selected === correct) {
+btn.classList.add('correct');
+document.getElementById('quizFeedback').innerText = "¡Correcto! Respuesta acertada.";
+document.getElementById('quizFeedback').style.color = "#15803d";
+} else {
+btn.classList.add('incorrect');
+btns[correct].classList.add('correct');
+document.getElementById('quizFeedback').innerText = "Respuesta incorrecta.";
+document.getElementById('quizFeedback').style.color = "#b91c1c";
+}
+
+setTimeout(() => {
+currentQ = (currentQ + 1) % quizData.length;
+renderQuiz();
+}, 2500);
+}
+
+renderQuiz();
+
+// Muro de Comentarios
+document.getElementById('wallForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const author = document.getElementById('author').value.trim();
+const message = document.getElementById('message').value.trim();
+
+if (author && message) {
+const container = document.getElementById('messagesContainer');
+const card = document.createElement('div');
+card.className = 'message-card';
+card.innerHTML = &lt;div class="message-header"&gt; &lt;span&gt;${escapeHTML(author)}</span>
+<span>Mensaje de Homenaje</span>
+</div>
+<p>${escapeHTML(message)}</p>
+`;
+container.prepend(card);
+document.getElementById('author').value = '';
+document.getElementById('message').value = '';
+}
+});
+
+function escapeHTML(str) {
+return str.replace(/[&<>'"]/g,
+tag => ({
+'&': '&',
+'<': '<',
+'>': '>',
+"'": ''',
+'"': '"'
+}[tag] || tag)
+);
+}
+</script>
+</body>
+</html>
